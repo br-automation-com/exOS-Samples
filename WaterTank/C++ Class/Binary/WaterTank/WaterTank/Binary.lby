@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.10"?>
+<Library SubType="Binary" xmlns="http://br-automation.co.at/AS/Library" Description="WaterTank exOS library">
+  <Files>
+    <File Description="">WaterTank.typ</File>
+    <File Description="">WaterTank.fun</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="ExData" />
+  </Dependencies>
+</Library>

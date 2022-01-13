@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+    <File FileName="Linux\watertank" ChangeEvent="Restart"/>
+    <Service Type="Startup" Command="chmod +x watertank"/>
+    <Service Type="Runtime" Command="./watertank"/>
+    <DatamodelInstance Name="WaterTank_0"/>
+</ComponentPackage>

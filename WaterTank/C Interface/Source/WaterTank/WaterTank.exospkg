@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+    <File FileName="Linux\watertank" ChangeEvent="Restart"/>
+    <Service Type="Startup" Command="chmod +x watertank"/>
+    <Service Type="Runtime" Command="./watertank"/>
+    <DatamodelInstance Name="WaterTank_0"/>
+    <Build>
+        <GenerateDatamodel FileName="WaterTank\WaterTank.typ" TypeName="WaterTank">
+            <SG4 Include="WaterTank.h"/>
+            <Output Path="WaterTank"/>
+            <Output Path="Linux"/>
+        </GenerateDatamodel>
+        <BuildCommand Command="C:\Windows\Sysnative\wsl.exe" WorkingDirectory="Linux" Arguments="-d Debian -e sh build.sh $(EXOS_VERSION)">
+            <Dependency FileName="Linux\exos_watertank.h"/>
+            <Dependency FileName="Linux\exos_watertank.c"/>
+            <Dependency FileName="Linux\libwatertank.h"/>
+            <Dependency FileName="Linux\libwatertank.c"/>
+            <Dependency FileName="Linux\watertank.c"/>
+            <Dependency FileName="Linux\termination.h"/>
+            <Dependency FileName="Linux\termination.c"/>
+            <Dependency FileName="Linux\CMakeLists.txt"/>
+            <Dependency FileName="Linux\build.sh"/>
+        </BuildCommand>
+    </Build>
+    <!-- ComponentGenerator info - do not change! -->
+    <ComponentGenerator Class="ExosComponentC" Version="2.0.0">
+        <Option Name="templateLinux" Value="c-static"/>
+        <Option Name="exportLinux" Value="watertank"/>
+        <Option Name="templateAR" Value="c-static"/>
+        <Option Name="typeName" Value="WaterTank"/>
+        <Option Name="typeFile" Value="WaterTank\WaterTank.typ"/>
+        <Option Name="SG4Includes" Value="WaterTank.h"/>
+    </ComponentGenerator>
+</ComponentPackage>

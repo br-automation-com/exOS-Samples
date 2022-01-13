@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.10"?>
+<Library SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="WaterTank datamodel declaration">WaterTank.typ</File>
+    <File Description="Generated datamodel header for WaterTank">exos_watertank.h</File>
+    <File Description="Generated datamodel source for WaterTank">exos_watertank.c</File>
+    <File Description="WaterTank function blocks">WaterTank.fun</File>
+    <File Description="WaterTank library source">watertank.cpp</File>
+    <File Description="Dynamic heap configuration">heapsize.cpp</File>
+    <File Description="WaterTank dataset class">WaterTankDataset.hpp</File>
+    <File Description="WaterTank datamodel class">WaterTankDatamodel.hpp</File>
+    <File Description="WaterTank datamodel class implementation">WaterTankDatamodel.cpp</File>
+    <File Description="WaterTank logger class">WaterTankLogger.hpp</File>
+    <File Description="WaterTank logger class implementation">WaterTankLogger.cpp</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="ExData" />
+  </Dependencies>
+</Library>

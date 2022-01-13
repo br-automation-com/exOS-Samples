@@ -1,0 +1,11 @@
+{
+  "name": "watertank",
+  "version": "1.0.0",
+  "description": "implementation of exOS data exchange defined by datatype WaterTank",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "your name",
+  "license": "MIT"
+}

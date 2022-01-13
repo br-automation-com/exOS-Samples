@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.10"?>
+<Package SubType="exosLinuxPackage" PackageType="exosLinuxPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="">exos-comp-watertank_1.0.0_amd64.deb</Object>
+    <Object Type="File" Description="">index.js</Object>
+  </Objects>
+</Package>

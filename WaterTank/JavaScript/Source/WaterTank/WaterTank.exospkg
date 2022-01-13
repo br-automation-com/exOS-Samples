@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+    <File FileName="Linux\exos-comp-watertank_1.0.0_amd64.deb" ChangeEvent="Reinstall"/>
+    <File FileName="Linux\index.js" ChangeEvent="Restart"/>
+    <Service Type="Install" Command="dpkg -i exos-comp-watertank_1.0.0_amd64.deb"/>
+    <Service Type="Remove" Command="dpkg --purge exos-comp-watertank"/>
+    <Service Type="Startup" Command="cp index.js /home/user/watertank"/>
+    <Service Type="Runtime" Command="node index.js" WorkingDirectory="/home/user/watertank"/>
+    <DatamodelInstance Name="WaterTank_0"/>
+    <Build>
+        <GenerateDatamodel FileName="WaterTank\WaterTank.typ" TypeName="WaterTank">
+            <SG4 Include="WaterTank.h"/>
+            <Output Path="WaterTank"/>
+            <Output Path="Linux"/>
+        </GenerateDatamodel>
+        <BuildCommand Command="C:\Windows\Sysnative\wsl.exe" WorkingDirectory="Linux" Arguments="-d Debian -e sh build.sh $(EXOS_VERSION)">
+            <Dependency FileName="Linux\exos_watertank.h"/>
+            <Dependency FileName="Linux\exos_watertank.c"/>
+            <Dependency FileName="Linux\CMakeLists.txt"/>
+            <Dependency FileName="Linux\build.sh"/>
+            <Dependency FileName="Linux\libwatertank.c"/>
+            <Dependency FileName="Linux\binding.gyp"/>
+            <Dependency FileName="Linux\package.json"/>
+            <Dependency FileName="Linux\package-lock.json"/>
+        </BuildCommand>
+    </Build>
+    <!-- ComponentGenerator info - do not change! -->
+    <ComponentGenerator Class="ExosComponentNAPI" Version="2.0.0">
+        <Option Name="exportLinux" Value="exos-comp-watertank_1.0.0_amd64.deb,index.js"/>
+        <Option Name="templateAR" Value="c-api"/>
+        <Option Name="typeName" Value="WaterTank"/>
+        <Option Name="typeFile" Value="WaterTank\WaterTank.typ"/>
+        <Option Name="SG4Includes" Value="WaterTank.h"/>
+    </ComponentGenerator>
+</ComponentPackage>

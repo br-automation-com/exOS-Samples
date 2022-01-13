@@ -1,0 +1,9 @@
+VAR
+	WaterTankInit_0 : WaterTankInit;
+	WaterTankCyclic_0 : WaterTankCyclic;
+	WaterTankExit_0 : WaterTankExit;
+	WaterTank_0 : WaterTank;
+	ExComponentInfo_0 : ExComponentInfo;
+	ExDatamodelInfo_0 : ExDatamodelInfo;
+	ExDataConnectionInfo_0 : ExDataConnectionInfo;
+END_VAR

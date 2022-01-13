@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+    <File FileName="Linux\watertank.py" ChangeEvent="Restart"/>
+    <File FileName="Linux\exos-comp-watertank_1.0.0_amd64.deb" ChangeEvent="Reinstall"/>
+    <Service Type="Install" Command="dpkg -i exos-comp-watertank_1.0.0_amd64.deb"/>
+    <Service Type="Remove" Command="dpkg --purge exos-comp-watertank"/>
+    <Service Type="Startup" Command="cp watertank.py /home/user/watertank"/>
+    <Service Type="Runtime" Command="python3 watertank.py" WorkingDirectory="/home/user/watertank"/>
+    <DatamodelInstance Name="WaterTank_0"/>
+</ComponentPackage>
